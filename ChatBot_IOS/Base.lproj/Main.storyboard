@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,184 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatBot_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29D-qV-AOi">
+                                <rect key="frame" x="16" y="50" width="288" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="I'm Chatty. I like drawing and speaking. ">
+                                        <attributes>
+                                            <font key="NSFont" size="25" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye4-47-PJW">
+                                <rect key="frame" x="7" y="259" width="307" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="How about talking right now?">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Optima-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-Tg-Gk2">
+                                <rect key="frame" x="153" y="316" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nRd-FO-Qlz">
+                                <rect key="frame" x="93" y="381" width="141" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.08235294371843338" green="0.54901963472366333" blue="0.76862752437591553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get Started">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Optima-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="OnGetStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IgK-Hh-1rQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Obl-Tg-Gk2" id="Oom-do-Rja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60" y="50.70422535211268"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vgl-gJ-fQU">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="XsY-bv-OXv" customClass="ViewController" customModule="Kommunicate_Example" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hFp-nB-SHC"/>
+                        <viewControllerLayoutGuide type="bottom" id="NZA-Fg-p5O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EP8-qu-YUa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="USs-ca-ofv">
+                                <rect key="frame" x="26" y="201.5" width="268" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHd-BV-dgq">
+                                        <rect key="frame" x="20" y="0.0" width="228" height="40"/>
+                                        <color key="backgroundColor" red="0.082352943720000002" green="0.54901963470000004" blue="0.76862752440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PCQ-7u-udH"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="VVz-kl-Fdn"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Launch Conversations">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="24" name="Optima-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnLaunchChat:" destination="WuY-wN-kul" eventType="touchUpInside" id="mf6-WA-mpP"/>
+                                            <action selector="launchConversation:" destination="XsY-bv-OXv" eventType="touchUpInside" id="1PE-vb-HlV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRD-Ui-aUE">
+                                        <rect key="frame" x="20" y="85" width="228" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lln-I5-QB0"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.094117656349999995" green="0.37352943420000001" blue="0.57254904510000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Logout">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Optima-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="OnExit:" destination="WuY-wN-kul" eventType="touchUpInside" id="Liq-Lk-pHz"/>
+                                            <action selector="logoutAction:" destination="XsY-bv-OXv" eventType="touchUpInside" id="oTR-Ov-CjS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xRD-Ui-aUE" firstAttribute="width" secondItem="hHd-BV-dgq" secondAttribute="width" id="Qkr-LD-QZb"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwU-xh-0yw">
+                                <rect key="frame" x="26" y="94" width="268" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Bhk-6Y-AdT"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="ChatBot_IOS">
+                                        <attributes>
+                                            <font key="NSFont" size="22" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="USs-ca-ofv" firstAttribute="centerY" secondItem="EP8-qu-YUa" secondAttribute="centerY" constant="-20" id="U1G-vC-9RX"/>
+                            <constraint firstItem="USs-ca-ofv" firstAttribute="leading" secondItem="EP8-qu-YUa" secondAttribute="leadingMargin" constant="10" id="a7e-Ut-jUi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xwU-xh-0yw" secondAttribute="trailing" constant="10" id="ha1-JG-0Jc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="USs-ca-ofv" secondAttribute="trailing" constant="10" id="opI-Ym-Y0w"/>
+                            <constraint firstItem="xwU-xh-0yw" firstAttribute="leading" secondItem="EP8-qu-YUa" secondAttribute="leadingMargin" constant="10" id="xdi-l0-CpO"/>
+                            <constraint firstItem="xwU-xh-0yw" firstAttribute="top" secondItem="hFp-nB-SHC" secondAttribute="bottom" constant="30" id="xtA-kf-sP3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cAB-WI-Uol"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h6y-Ma-bhB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPY-5Z-l8p" sceneMemberID="firstResponder"/>
+                <exit id="WuY-wN-kul" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="474.51274362818594"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oro-pI-o33">
+            <objects>
+                <navigationController storyboardIdentifier="NavViewController" automaticallyAdjustsScrollViewInsets="NO" id="uQC-bh-emF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m9S-pd-hih">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XsY-bv-OXv" kind="relationship" relationship="rootViewController" id="S3B-7k-JaV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GmP-A7-3vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687.20000000000005" y="474.51274362818594"/>
         </scene>
     </scenes>
 </document>
