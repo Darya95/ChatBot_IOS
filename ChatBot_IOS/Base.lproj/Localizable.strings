@@ -1,10 +1,10 @@
-/*
- Localizable.strings
- Kommunicate
- 
- Created by Mukesh on 29/01/19.
- Copyright © 2019 CocoaPods. All rights reserved.
- */
+/* 
+  Localizable.strings
+  Kommunicate
+
+  Created by Mukesh on 29/01/19.
+  Copyright © 2019 CocoaPods. All rights reserved.
+*/
 
 /* PreChatView */
 
@@ -143,4 +143,3 @@ OneYear = "1 Year";
 MuteButton = "Mute";
 UnmuteButton = "Unmute";
 NoConversationsLabelText = "Start to chat with your friends by tapping the 'New Chat' button";
-
