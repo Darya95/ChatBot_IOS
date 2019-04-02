@@ -15,9 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
 
-    @IBOutlet weak var emailId: UITextField!
-
-    @IBOutlet weak var loginAsVisitorButton: UIButton!
+    //@IBOutlet weak var loginAsVisitorButton: UIButton!
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     // To avoid scrolling up multiple times when a different text field is active.
@@ -26,12 +24,6 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loginAsVisitorButton.layer.borderWidth = 1
-        loginAsVisitorButton.layer.borderColor = UIColor(hexString: "1588B2")?.cgColor
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     @IBAction func getStartedBtn(_ sender: AnyObject) {
@@ -52,16 +44,13 @@ class LoginViewController: UIViewController {
         let kmUser = userWithUserId(userIdEntered, andApplicationId: applicationId)
 
         print("userId:: ", kmUser.userId)
-        if(!((emailId.text?.isEmpty)!)){
-            kmUser.email = emailId.text
-        }
 
         if (!((password.text?.isEmpty)!)){
             kmUser.password = password.text
         }
         registerUser(kmUser)
     }
-
+/*
     @IBAction func loginAsVisitor(_ sender: Any) {
         resignFields()
         let applicationId = AppDelegate.appId
@@ -70,7 +59,7 @@ class LoginViewController: UIViewController {
         let kmUser = userWithUserId(Kommunicate.randomId(), andApplicationId: applicationId)
         registerUser(kmUser)
     }
-
+*/
     @objc func keyboardWillHide(notification: NSNotification) {
 
         guard isKeyboardVisible,
@@ -144,8 +133,10 @@ class LoginViewController: UIViewController {
     }
 
     private func resignFields() {
+        
         userName.resignFirstResponder()
-        emailId.resignFirstResponder()
+        //emailId.resignFirstResponder()
         password.resignFirstResponder()
+ 
     }
 }
