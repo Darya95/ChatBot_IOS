@@ -1,11 +1,3 @@
-//
-//  LoginViewController.swift
-//  Kommunicate_Example
-//
-//  Created by Mukesh on 27/02/19.
-//  Copyright © 2019 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import Kommunicate
 

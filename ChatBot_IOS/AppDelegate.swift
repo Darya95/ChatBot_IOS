@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Kommunicate
-//
-//  Created by mukeshthawani on 02/19/2018.
-//  Copyright (c) 2018 mukeshthawani. All rights reserved.
-//
-
 import UIKit
 import UserNotifications
 import Kommunicate
