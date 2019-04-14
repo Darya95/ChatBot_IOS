@@ -145,7 +145,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = F49CG7TZ75;
+						DevelopmentTeam = AJNJ87WULD;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -402,7 +402,7 @@
 				CODE_SIGN_ENTITLEMENTS = ChatBot_IOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F49CG7TZ75;
+				DEVELOPMENT_TEAM = AJNJ87WULD;
 				INFOPLIST_FILE = "$(SRCROOT)/ChatBot_IOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -422,7 +422,7 @@
 				CODE_SIGN_ENTITLEMENTS = ChatBot_IOS.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F49CG7TZ75;
+				DEVELOPMENT_TEAM = AJNJ87WULD;
 				INFOPLIST_FILE = "$(SRCROOT)/ChatBot_IOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
